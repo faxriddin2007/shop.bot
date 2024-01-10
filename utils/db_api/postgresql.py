@@ -3,7 +3,7 @@ import psycopg2
 
 conn = psycopg2.connect(database='shop_db_faxriddin',
                         user='bot',
-                        password='1234',
+                        password='bot',
                         host='localhost',
                         port=5432)
 
@@ -12,7 +12,7 @@ class DBManager:
     def __init__(self):
         self.conn = psycopg2.connect(database='shop_db_faxriddin',
                                      user='bot',
-                                     password='1234',
+                                     password='bot',
                                      host='localhost',
                                      port=5432)
 
