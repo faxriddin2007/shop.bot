@@ -1,14 +1,6 @@
 import sqlite3
 import psycopg2
 
-conn = psycopg2.connect(database='shop_db_faxriddin',
-                        user='bot',
-                        password='bot',
-                        host='localhost',
-                        port=5432)
-self.cursor = self.conn.cursor()
-
-
 
 class DBManager:
     def __init__(self):
