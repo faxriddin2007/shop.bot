@@ -6,6 +6,8 @@ conn = psycopg2.connect(database='shop_db_faxriddin',
                         password='bot',
                         host='localhost',
                         port=5432)
+self.cursor = self.conn.cursor()
+
 
 
 class DBManager:
@@ -15,6 +17,7 @@ class DBManager:
                                      password='bot',
                                      host='localhost',
                                      port=5432)
+        self.cursor = self.conn.cursor()
 
     def get_user(self, chat_id):
         query = f"SELECT * FROM users WHERE chat_id={chat_id}"
