@@ -1,7 +1,7 @@
 import sqlite3
 import psycopg2
 
-conn = psycopg2.connect(database='shop_db',
+conn = psycopg2.connect(database='shop_db_faxriddin',
                         user='postgres',
                         password='1234',
                         host='localhost',
@@ -10,7 +10,7 @@ conn = psycopg2.connect(database='shop_db',
 
 class DBManager:
     def __init__(self):
-        self.conn = psycopg2.connect(database='shop_db',
+        self.conn = psycopg2.connect(database='shop_db_faxriddin',
                                      user='postgres',
                                      password='1234',
                                      host='localhost',
