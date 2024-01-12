@@ -39,7 +39,7 @@ async def check_sub_handler(call: types.CallbackQuery):
 
 
 
-@dp.message_handler(CommandStart())
+@dp.message_handler(CommandStart(), state="*")
 async def bot_start(message: types.Message):
     not_subs = []
     for channel in channels:
