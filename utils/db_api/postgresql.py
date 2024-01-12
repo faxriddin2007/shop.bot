@@ -19,13 +19,13 @@ class DBManager:
 
     def get_user_all_products(self, chat_id: int):
         query = f"SELECT * FROM products WHERE status = 'active' AND chat_id = {chat_id}"
-        products = self.cursor.execute(query).fetchall()
-        return products
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
 
     def get_all_products(self):
         query = "SELECT * FROM products WHERE status = 'active'"
-        products = self.cursor.execute(query).fetchall()
-        return products
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
 
     def delete_products(self, product_id: int):
         query = f"delete from products where id={product_id}"
