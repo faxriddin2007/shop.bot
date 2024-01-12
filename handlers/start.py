@@ -219,7 +219,7 @@ async def profile_handler(message: types.Message):
 
 
 
-#mars bozor
+# mars bozor
         
 @dp.message_handler(text="🚀 Mars Bozor", state="*")
 async def mars_bozor_handler(message: types.Message, state: FSMContext):
@@ -328,10 +328,3 @@ async def get_price_handler(message: types, state: FSMContext):
         text = "Botda xatolik bor ❌"
     await message.answer(text=text, reply_markup=user_main_menu)
     await state.finish()
-
-# # back
-    
-@dp.message_handler(text="🔙 Orqaga")
-async def back_handler(message: types.Message):
-    text = "Asosiy menyuga qaytdingiz."
-    await message.answer(text=text, reply_markup=user_main_menu)

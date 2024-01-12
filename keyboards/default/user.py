@@ -28,6 +28,8 @@ delete_product_table = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="🗑 Mahsulot o'chirish"),
+        ],
+        [
             KeyboardButton(text="🔙 Orqaga")
         ]
     ],
