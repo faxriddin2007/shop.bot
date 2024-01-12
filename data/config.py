@@ -12,8 +12,4 @@ DB_HOST = env.str("DB_HOST")
 DB_PASS = env.str("DB_PASS")
 DB_USER = env.str("DB_USER")
 
-channels = [
-    (-1001926837172, 'Test kanal', 'https://t.me/Faxriddinov_Backend'),
-    (-1001926837172, 'Test kanal', 'https://t.me/Faxriddinov_Backend'),
-    (-1001926837172, 'Test kanal', 'https://t.me/Faxriddinov_Backend')
-            ]
+channels = []
