@@ -245,7 +245,7 @@ async def next_product_handler(call: types.CallbackQuery, state:FSMContext):
 
     product = await next_product(products, index)
     if product:
-        user = db_manager.get_user(chat_id=call.message.chat.id)
+        user = db_manager.get_user(chat_id=product[6])
         await call.message.delete()
         index = index + 1
         photo = product[3]
@@ -267,7 +267,7 @@ async def previous_product_handler(call: types.CallbackQuery, state: FSMContext)
 
     product = await previous_product(products, index)
     if product:
-        user = db_manager.get_user(chat_id=call.message.chat.id)
+        user = db_manager.get_user(chat_id=product[6])
         await call.message.delete()
         index = index - 1
         photo = product[3]
