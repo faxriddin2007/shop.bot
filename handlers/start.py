@@ -239,7 +239,7 @@ async def mars_bozor_handler(message: types.Message, state: FSMContext):
 
 @dp.callback_query_handler(text="next_product", state='mars-bozor-state')
 async def next_product_handler(call: types.CallbackQuery, state:FSMContext):
-    products = db_manager.get_user_all_products(chat_id=call.message.chat.id)
+    products = db_manager.get_all_products(chat_id=call.message.chat.id)
     data = await state.get_data()
     index = data.get('index')
 
@@ -261,7 +261,7 @@ async def next_product_handler(call: types.CallbackQuery, state:FSMContext):
 
 @dp.callback_query_handler(text="previous_product", state='mars-bozor-state')
 async def previous_product_handler(call: types.CallbackQuery, state: FSMContext):
-    products = db_manager.get_user_all_products(chat_id=call.message.chat.id)
+    products = db_manager.get_all_products(chat_id=call.message.chat.id)
     data = await state.get_data()
     index = data.get('index')
 
